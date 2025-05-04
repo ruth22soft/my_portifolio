@@ -26,7 +26,7 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:contact@ruthtamiru10@gmail.com">
+        <a href="mailto:ruthtamiru10@gmail.com?subject=Let's%20Collaborate&body=Hi%20Ruth,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20let%20me%20know%20your%20availability.%0D%0A%0D%0AThanks!">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -45,7 +45,7 @@ const Footer = () => {
               key={info.id}
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <Image src={info.img} alt="icons" width={20} height={20} />
             </div>
           ))}
         </div>

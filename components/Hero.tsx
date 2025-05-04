@@ -1,5 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
+import Image from "next/image";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -42,8 +42,19 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          {/* Circular Image on the Left */}
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-purple-500">
+            <Image
+              src="/ruth.jpg" // Replace with your image path
+              alt="My Profile"
+              width={192} // Adjust width as needed
+              height={192} // Adjust height as needed
+              className="object-cover"
+            />
+          </div>
+
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Developer| AI Researcher
+            Full Stack Developer| AI Researcher
           </p>
 
           {/**
@@ -55,6 +66,16 @@ const Hero = () => {
             words="Crafting Intelligent Systems, Not Just Code"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
+           {/* Circular Image
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-purple-500 my-6">
+            <Image
+              src="/ruth.jpg" // Replace with your image path
+              alt="My Profile"
+              width={192} // Adjust width as needed
+              height={192} // Adjust height as needed
+              className="object-cover"
+            />
+          </div> */}
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I am Ruth Tamiru — a full-stack developer who architects AI-infused systems, not just interfaces. While others lightly sprinkle machine learning, I marinate applications in AI’s transformative potential, I bridge tomorrow’s AI breakthroughs with today’s production-ready code.

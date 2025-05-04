@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
@@ -11,9 +11,9 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
-    name: string;
-    title: string;
+     title: string;
+     description: string;
+     logos: { name: string; img: string }[];
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -104,33 +104,63 @@ export const InfiniteMovingCards = ({
             // change to idx cuz we have the same name
             key={idx}
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              {/* change text color, text-lg */}
-              <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                {/* add this div for the profile img */}
-                <div className="me-3">
-                  <img src="/profile.svg" alt="profile" />
-                </div>
-                <span className="flex flex-col gap-1">
-                  {/* change text color, font-normal to font-bold, text-xl */}
-                  <span className="text-xl font-bold leading-[1.6] text-white">
-                    {item.name}
-                  </span>
-                  {/* change text color */}
-                  <span className=" text-sm leading-[1.6] text-white-200 font-normal">
-                    {item.title}
-                  </span>
-                </span>
+          <div>
+              {/* Title */}
+              <h3 className="text-xl font-bold leading-[1.6] text-white mb-4">
+                {item.title}
+              </h3>
+              {/* Description */}
+              <p className="text-sm leading-[1.6] text-white-200 font-normal mb-6">
+                {item.description}
+              </p>
+              {/* Logos */}
+              <div className="flex flex-wrap gap-4">
+                {item.logos.map((logo) => (
+                  <div
+                    key={logo.name}
+                    className="flex flex-col items-center justify-center"
+                  >
+                    <Image
+                      src={logo.img}
+                      alt={logo.name}
+                      width={50}
+                      height={50}
+                      className="mb-2"
+                    />
+                    <p className="text-xs text-white">{logo.name}</p>
+                  </div>
+                ))}
               </div>
-            </blockquote>
+            </div>
           </li>
+  
+          //   <blockquote>
+          //     <div
+          //       aria-hidden="true"
+          //       className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+          //     ></div>
+          //     {/* change text color, text-lg */}
+          //     <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
+          //       {item.quote}
+          //     </span>
+          //     <div className="relative z-20 mt-6 flex flex-row items-center">
+          //       {/* add this div for the profile img */}
+          //       <div className="me-3">
+          //         <Image src="/profile.svg" alt="profile" />
+          //       </div>
+          //       <span className="flex flex-col gap-1">
+          //         {/* change text color, font-normal to font-bold, text-xl */}
+          //         <span className="text-xl font-bold leading-[1.6] text-white">
+          //           {item.name}
+          //         </span>
+          //         {/* change text color */}
+          //         <span className=" text-sm leading-[1.6] text-white-200 font-normal">
+          //           {item.title}
+          //         </span>
+          //       </span>
+          //     </div>
+          //   </blockquote>
+          // </li>
         ))}
       </ul>
     </div>
