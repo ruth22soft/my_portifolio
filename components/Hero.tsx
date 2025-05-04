@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            Developer| AI Researcher
           </p>
 
           {/**
@@ -52,12 +52,13 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Crafting Intelligent Systems, Not Just Code"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I am Ruth , a Full Stack Developer and AI engineer based in Ethiopia.
+            Hi, I am Ruth Tamiru — a full-stack developer who architects AI-infused systems, not just interfaces. While others lightly sprinkle machine learning, I marinate applications in AI’s transformative potential, I bridge tomorrow’s AI breakthroughs with today’s production-ready code.
+
           </p>
 
           <a href="#about">
