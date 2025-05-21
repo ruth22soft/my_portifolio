@@ -1,8 +1,11 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "TechStack", link: "#techStack" },
   { name: "Contact", link: "#contact" },
+  { name: "Download CV", link: "/Ruth_resume.pdf" },
 ];
 
  //export const gridItems = [
@@ -63,36 +66,36 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Amharic conversational agent - AI Chatbot",
+    des: "Chatbot deployed on hugging face",
+    img: "/amharic_con.png",
+    iconLists: ["/huggingface.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://huggingface.co/spaces/ruthtamiru/amharic_con",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "LRMS - Land registration management system",
+    des: "A web application for managing land registration and transactions.",
+    img: "/lrms.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mongo.svg", "/node.svg"],
+    link: "https://github.com/ruth22soft/land_management_version1",
   },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
+  // {
+  //   id: 3,
+  //   title: "AI Image SaaS - Canva Application",
+  //   des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+  //   img: "/p3.svg",
+  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+  //   link: "/ui.aiimg.com",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Animated Apple Iphone 3D Website",
+  //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+  //   img: "/p4.svg",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+  //   link: "/ui.apple.com",
+  // },
 ];
 
 // export const testimonials = [
@@ -193,29 +196,30 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "National Payment Gateway - Ethswitch",
-    desc: "Assisted in the development and integration of a E-commerce payment gateway nationally in Ethiopia and being able to handle all local bank issues .",
+    title: "Amharic conversational agent - AI Chatbot",
+    desc: "Deployed on Hugging Face Spaces, enhances human-computer interaction in low-resource languages by understanding and generating Amharic responses. Leveraging transformer-based language models fine-tuned on Amharic datasets, your project supports applications like customer service, digital assistants, and educational tools. It highlights your expertise in AI and NLP while demonstrating practical deployment on modern platforms, showcasing your ability to bridge technological gaps and make AI more accessible.",
+
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Back end developer - AASTU Disciplinary Incident System", 
-    desc: "Designed and developed back end for the incident management system using Node.",
+    title: "Full stack developer - AASTU Disciplinary Incident System", 
+    desc: "Designed and developed disciplinary incident management system using Node and React.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Back end developer - LRMS",
+    desc: "Built a Node.js/MySQL API for property record management, handling CRUD operations and title verification workflows. Designed 15+ REST endpoints connecting to a React frontend, implementing JWT authentication for multi-user access. Streamlined data validation processes that reduced error rates in simulated land transaction scenarios.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "National Payment Gateway - EthSwitch",
+    desc: "Assisted in the development and integration of a E-commerce payment gateway nationally in Ethiopia and being able to handle all local bank issues .",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -225,13 +229,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/ruth22soft",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/email.jpg",
+    link: "mailto:ruthtamiru10@gmail.com",
+
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/ruth-tamiru-538b521a8/",
   },
 ];
